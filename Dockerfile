@@ -6,6 +6,8 @@ WORKDIR /var/nodeapp/
 
 COPY ./app/ .
 
+RUN apk update && add --no-cache node
+
 RUN npm install
 
 Expose 8080
